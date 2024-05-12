@@ -1,0 +1,76 @@
+/// ----------------- Registration Validation Test ---------------------///
+
+I tested the registration process by looking at correct inputs, missing or incorrect inputs, and invalid email format.
+
+The tested data had one with all the information called the valid registration which focused on successful login with all user information. The next test focused on a missing username, but had a email and password. Then testing the missing email, but username and password. Lastly was testing the invalid email format, but the correct username and password. 
+
+When testing for the valid registration will all the information. There was an error where the successfully register pop up window won't show up. In order to fix this I had to add the code 
+
+	 messagebox.showinfo("Success", "Registration successful!")
+
+This allow the user to know that they had successfully registration with the fitness application.
+
+The rest of the valid tests came back with the correct responses with the program have user inputs and displays error were used in the right messages. 
+
+/// ----------------- Login Database Validation Test -------------------///
+
+I tested the database of the fitness tracker by using a txt file named records.
+
+The tested data had an error message about not having the dataset for the login.
+
+When testing the error message for the login, I had to change the database format from 
+
+	Username: example, Email: example@gmail.com, Password: Password123
+
+to this other format
+
+	example,example@gmail.com,Password123
+
+This allowed the data to be pulled from what the user put into the registration form to the login process. 
+
+/// --------------- Registration Database Validation Test --------------///
+
+I tested the database of the fitness tracker by using a txt file named records.
+
+The data was tested to see if the information from registration was being saved in the record.txt.
+
+When testing the registration for the record, I had to change the code for storing the information in the record.txt with this
+
+	 def save_registration(self, username, email, password):
+        try:
+            with open("records.txt", "a") as file:
+                file.write(f"{username},{email},{password}\n")
+        except Exception as e:
+            tk.messagebox.showerror("Error", f"Failed to save registration: {e}")
+	
+This allowed the users username, email, and password to be stored in the record.txt which would later be pulled for the login process. 
+
+/// ----------------- Navigation  Validation Test ---------------------///
+
+The navigation between screens from welcome, registration, login, and dashboard work correctly and had the proper responses with back button and exit program. 
+
+/// --------------------- Login Validation Test ---------------------///
+
+I tested the login process by looking at the login button to move the user to the dashboard page if the information for the email and password were in the registration users
+
+When testing this feature it wasn't connecting the dashboard and the login button wasn't working. In order to fix this I had add this code to the login button process
+	
+    for record in records:
+            if record["email"] == email and record["password"] == password:
+                tk.messagebox.showinfo("Success", f"Welcome back, {record['username']}!")
+                self.show_dashboard()  # Navigate to the dashboard
+                return
+
+This allows the login button to look over the registration user_record.txt to ensure that the user has registered with fitness tracker application. If the user information is true then the message "Welcome back" and then the username and moves the user to the dashboard page. 
+
+
+/// --------------------- Buttons Validation Test ---------------------///
+
+I tested the buttons on the fitness tracker application by ensuring all of the buttons worked within the fitness tracker. I started with testing the main buttons on the welcome to the fitness tracker app with the login, sign up, and exit. Next, I tested the login buttons of login and back. Then, I tested the registration buttons of register and back button. Lastly I tested the dashboard page with the logout button. 
+
+All of the button validation tests came back with the correct responses within the program and allowed the user to navigate with easy in the fitness tracker.
+
+
+
+
+

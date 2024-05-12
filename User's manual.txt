@@ -1,0 +1,37 @@
+Hello everyone, welcome to this fitness tracker application. In using this manual you will learn how to use this program and learn about the features of this system. 
+
+Introduction
+This fitness tracker is designed to aid users to access their dashboard with the general dashboard. With features of allow users to register and login being a key part of the fitness tracker so far. 
+
+Installation
+For this fitness tracker you will not need to install anything other than the zip file named "project" when downloading this application. Then you will need to extract the zip file by right-clicking over the project.zip file and when selecting the extract zip file. Finally you will need to run the M08_Project into an IDLE environment. 
+
+Getting Started 
+After setting up the application in an IDLE environment you will be at the welcome to fitness tracker screen in which you will need to register an account using the sign up button if you are new or login button if you have already registered. 
+
+Features
+Welcome Page
+	Which display an image related to fitness
+	Then the page will allow you to either login or register
+	If you want to leave the application press the exit button
+
+Login Page
+	The login greets the user with a form to fill out
+		Note: that only registered accounts will be able to login
+	Next the user will enter in their email and password
+	Then press the login button which if the information is valid a pop up window will show up saying "Welcome and your username"
+	In the user press the okay button in the pop up window they will be directed to the dashboard page
+
+Registration Page
+	The registration greets new users with the ability to create an account
+	Next, the user will need to create their username, email, and password for this account
+	Then the user will press the register button and will be directed back to the welcome page to login
+
+Dashboard page
+	Will display an image that is related to fitness.
+	Along with the users fitness information (I will continue working on this aspect)
+
+Exited application
+If an any point you would like to exit the fitness tracker press the back button until you reach an exit button or if you are login into the dashboard simply press the logout button.
+
+	
